@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why the Claude API is the right foundation for UK business AI tools — Utilis Technologies</title>
+  <meta name="description" content="Anthropic's safety-first approach and enterprise-grade API make Claude the most suitable model for businesses operating under strict data governance requirements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080808; --bg2: #0f0f0f; --bg3: #141414;
+      --border: rgba(255,255,255,0.07); --border-hover: rgba(255,255,255,0.15);
+      --text: #e8e8e8; --text-muted: #666; --text-dim: #999;
+      --accent: #00c2a8; --accent2: #0090ff; --accent-glow: rgba(0,194,168,0.15);
+      --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+    .grid-bg { position: fixed; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); background: rgba(8,8,8,0.8); }
+    .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 14px; color: var(--text-dim); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--accent); color: #000 !important; padding: 9px 20px; border-radius: 6px; font-weight: 500 !important; font-size: 13px !important; transition: opacity 0.2s !important; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ARTICLE */
+    .article-wrap { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; padding: 160px 48px 120px; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); text-decoration: none; margin-bottom: 48px; transition: color 0.2s; }
+    .back-link:hover { color: var(--text-dim); }
+    .article-cat { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .article-cat::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--accent); }
+    .article-title { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 800; letter-spacing: -2px; color: #fff; line-height: 1.05; margin-bottom: 24px; }
+    .article-meta { display: flex; align-items: center; gap: 20px; margin-bottom: 56px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .article-date { font-size: 13px; color: var(--text-muted); }
+    .article-read { font-size: 13px; color: var(--text-muted); }
+    .article-dot { width: 3px; height: 3px; background: var(--text-muted); border-radius: 50%; }
+
+    /* PROSE */
+    .prose p { font-size: 17px; color: #c8c8c8; line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
+    .prose h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -0.8px; color: #fff; margin: 52px 0 20px; }
+    .prose h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: -0.3px; color: #fff; margin: 36px 0 14px; }
+    .prose strong { color: #fff; font-weight: 500; }
+    .prose ul { margin: 0 0 28px 0; padding: 0; list-style: none; }
+    .prose ul li { font-size: 17px; color: #c8c8c8; line-height: 1.8; font-weight: 300; padding: 8px 0 8px 24px; position: relative; border-bottom: 1px solid var(--border); }
+    .prose ul li:first-child { border-top: 1px solid var(--border); }
+    .prose ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 13px; top: 10px; }
+    .callout { background: var(--bg2); border: 1px solid rgba(0,194,168,0.2); border-left: 3px solid var(--accent); border-radius: 8px; padding: 28px 32px; margin: 40px 0; }
+    .callout p { margin-bottom: 0; font-size: 16px; color: var(--text-dim); }
+
+    /* CTA */
+    .article-cta { margin-top: 80px; padding: 52px; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -0.8px; color: #fff; margin-bottom: 12px; }
+    .article-cta p { font-size: 16px; color: var(--text-dim); margin-bottom: 28px; font-weight: 300; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #000; padding: 14px 28px; border-radius: 8px; font-family: var(--font-body); font-size: 15px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+    .btn-primary:hover { background: #00d9bc; transform: translateY(-1px); box-shadow: 0 8px 32px rgba(0,194,168,0.3); }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+    .footer-logo { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--text); text-decoration: none; }
+    .footer-logo span { color: var(--accent); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+      .article-wrap { padding: 120px 24px 80px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="/" class="nav-logo">Utilis<span>.</span>Tech</a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">How It Works</a></li>
+    <li><a href="/#why">Why Us</a></li>
+    <li><a href="/#insights">Insights</a></li>
+    <li><a href="/#cta" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+  <a href="/#insights" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Insights
+  </a>
+
+  <div class="article-cat">Claude API</div>
+  <h1 class="article-title">Why the Claude API is the right foundation for UK business AI tools</h1>
+  <div class="article-meta">
+    <span class="article-date">February 2026</span>
+    <div class="article-dot"></div>
+    <span class="article-read">7 min read</span>
+  </div>
+
+  <div class="prose">
+    <p>When a business decides to embed AI into its operations, the first and most consequential decision is which model to build on. Choose wrong and you'll spend the next eighteen months unpicking a foundation that doesn't meet your governance requirements, can't be audited, or simply doesn't perform consistently enough to trust with real business processes.</p>
+
+    <p>We've evaluated the main options — OpenAI's GPT-4 family, Google's Gemini, Meta's open-source Llama models, and Anthropic's Claude. For UK businesses operating under GDPR, with real data governance obligations and a need for consistent, controllable behaviour from their AI systems, Claude consistently emerges as the right foundation. Here's why.</p>
+
+    <h2>The safety architecture is built in, not bolted on</h2>
+
+    <p>Anthropic was founded specifically to research safe and reliable AI. That isn't a marketing position — it shapes how the model is trained and how it behaves. Claude is developed using a technique called Constitutional AI, which means the model's values and behaviour constraints are baked into training rather than applied as a filter on top of outputs.</p>
+
+    <p>In practical terms, this matters when you're building tools that handle sensitive business data. Claude is less likely to produce confident but incorrect outputs (what the industry calls "hallucinations"), more likely to say it doesn't know something rather than fabricate an answer, and more consistent in refusing to do things it shouldn't — whether that's leaking data it's been given in context or generating outputs that could expose your business to risk.</p>
+
+    <p>For a client document processing tool, a customer-facing assistant, or an internal knowledge base query system, that reliability isn't a nice-to-have. It's the difference between a tool your team trusts and one they quietly stop using.</p>
+
+    <h2>Data handling that UK businesses can actually rely on</h2>
+
+    <p>This is where many AI tools fall apart in a UK business context. GDPR isn't optional, and the ICO takes data mishandling seriously. When you send data through an AI API, you need clarity on what happens to it — whether it's used to train future models, where it's stored, for how long, and under what legal basis.</p>
+
+    <p>Anthropic's API terms are explicit: <strong>data submitted via the API is not used to train Claude by default.</strong> This is a critical distinction from consumer-facing AI products, where your inputs may feed back into model training. Enterprise-grade data processing agreements are available, and Anthropic maintains data processing infrastructure in AWS regions that can satisfy most UK data residency requirements.</p>
+
+    <p>When we build custom AI tools for clients, we document every data flow — what goes into the API call, what comes back, what gets stored and where. Claude's clear data handling policies make that documentation straightforward and defensible.</p>
+
+    <h2>Consistency and controllability for business workflows</h2>
+
+    <p>Business processes require predictable outputs. If you're automating the triage of customer support emails, you need the AI to categorise them consistently — not to behave differently depending on subtle phrasing variations, or to change behaviour after a model update.</p>
+
+    <p>The Claude API gives developers significant control over model behaviour through system prompts, temperature settings, and structured output formats. You can constrain Claude's responses to a defined schema, instruct it to behave in very specific ways for specific contexts, and version-lock to particular model releases so a background update doesn't change the behaviour of a production tool overnight.</p>
+
+    <p>We've found Claude particularly strong at following complex, multi-step instructions without losing the thread — which is essential for document processing, structured data extraction, and any workflow where the AI needs to apply several rules simultaneously.</p>
+
+    <h2>The context window advantage</h2>
+
+    <p>Claude's context window — the amount of text it can process in a single interaction — is among the largest available. This has real practical implications for business tools. It means you can feed an entire contract, a full email thread, a lengthy policy document, or a batch of invoices into a single API call and get coherent analysis across the whole thing.</p>
+
+    <p>Smaller context windows force you to chunk documents, manage state across multiple API calls, and build significantly more complex applications to achieve the same result. For most UK SME use cases — processing supplier contracts, summarising board papers, extracting data from application forms — Claude's context window handles the job in a single pass.</p>
+
+    <h2>What this means in practice</h2>
+
+    <p>When we scope a new AI tool for a client, the conversation about which model to use usually ends quickly. Claude is our default recommendation for most business applications because:</p>
+
+    <ul>
+      <li>The data handling commitments satisfy GDPR requirements without needing complex workarounds</li>
+      <li>The output consistency reduces the QA overhead on production tools</li>
+      <li>The large context window simplifies architecture for document-heavy workflows</li>
+      <li>The safety characteristics mean tools behave predictably even when users try to push them in unintended directions</li>
+      <li>Anthropic's enterprise support and SLAs are appropriate for business-critical applications</li>
+    </ul>
+
+    <p>There are cases where a different model makes sense — for certain multimodal tasks, for cost optimisation on very high-volume simple queries, or where a client already has a significant investment in another provider's ecosystem. But for the core use case of building reliable, governed, custom AI tools for UK businesses, Claude is where we start.</p>
+
+    <div class="callout">
+      <p><strong>A note on cost.</strong> Claude API pricing is broadly comparable to alternatives at similar capability levels. For business tools where accuracy and reliability are the primary concern, optimising for the cheapest model is usually a false economy — the cost of an unreliable output in a real business process far exceeds the API cost difference.</p>
+    </div>
+
+    <h2>Getting started</h2>
+
+    <p>If you're exploring AI tools for your business and want to understand what's actually achievable with the Claude API — and what it would cost and take to build — we offer a no-obligation discovery conversation. We'll give you a straight assessment of whether a custom AI tool is the right approach, or whether an off-the-shelf solution would serve you better.</p>
+
+    <p>The AI integration space moves quickly, and the gap between businesses that build good AI habits now and those that wait is widening. But it doesn't have to be complicated or expensive to start.</p>
+  </div>
+
+  <div class="article-cta">
+    <h3>Ready to explore what Claude can do for your business?</h3>
+    <p>Book a free 60-minute discovery call. No pitch, no pressure — just a clear-eyed conversation about what's possible.</p>
+    <a href="mailto:contact@utilistech.co.uk" class="btn-primary">
+      Get in Touch
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">Utilis<span>.</span>Tech</a>
+  <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales.</p>
+</footer>
+
+</body>
+</html>
