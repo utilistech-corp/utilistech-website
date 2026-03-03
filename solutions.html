@@ -155,33 +155,30 @@
       footer{flex-direction:column;align-items:flex-start;padding:32px 24px}
     }
   
-    /* ── HAMBURGER ── */
-    .hamburger {
+    /* ── MOBILE NAV (pure CSS checkbox hack) ── */
+    #nav-toggle { display: none; }
+
+    .nav-label {
       display: none;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
-      background: none;
-      border: none;
       padding: 12px;
       z-index: 1001;
-      touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
     }
-    .hamburger span {
+    .nav-label span {
       display: block;
       width: 24px;
       height: 2px;
       background: var(--text);
       border-radius: 2px;
       transition: all 0.3s;
+      pointer-events: none;
     }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     @media (max-width: 900px) {
-      .hamburger { display: flex; }
+      .nav-label { display: flex; }
       .nav-links {
         display: none;
         position: fixed;
@@ -193,7 +190,10 @@
         gap: 32px;
         z-index: 1000;
       }
-      .nav-links.open { display: flex; }
+      #nav-toggle:checked ~ nav .nav-links { display: flex; }
+      #nav-toggle:checked ~ nav .nav-label span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      #nav-toggle:checked ~ nav .nav-label span:nth-child(2) { opacity: 0; }
+      #nav-toggle:checked ~ nav .nav-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
       .nav-links a { font-size: 22px !important; }
       .nav-links .nav-cta { padding: 14px 32px !important; font-size: 18px !important; }
     }
@@ -203,11 +203,12 @@
 <body>
 <div class="grid-bg"></div>
 
+<input type="checkbox" id="nav-toggle" aria-hidden="true">
 <nav>
   <a href="/index.html" class="nav-logo">Utilis<span>.</span>Tech</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <label class="nav-label" for="nav-toggle" aria-label="Menu">
     <span></span><span></span><span></span>
-  </button>
+  </label>
   <ul class="nav-links">
     <li><a href="/index.html#services">Services</a></li>
     <li><a href="/index.html#process">How It Works</a></li>
@@ -535,21 +536,5 @@
   document.body.classList.add('jsl');
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.i
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var hamburger = document.getElementById('hamburger');
-    var navLinks = document.querySelector('.nav-links');
-    if (!hamburger || !navLinks) return;
-    hamburger.addEventListener('click', function() {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
-  });
-</script>
+
 </html>
