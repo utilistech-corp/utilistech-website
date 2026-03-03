@@ -765,3 +765,25 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(el => {
       if (el.isIntersect
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.querySelector('.nav-links');
+    if (!hamburger || !navLinks) return;
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('touchend', toggleMenu);
+    navLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+</script>
+</html>
