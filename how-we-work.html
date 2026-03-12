@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case Studies — Utilis Technologies</title>
-  <meta name="description" content="Real-world AI integration case studies. Explore how UK businesses across financial services, legal, and retail have adopted AI safely and delivered measurable results." />
+  <title>How We Work — Utilis Technologies</title>
+  <meta name="description" content="See how Utilis Technologies approaches AI integration projects. From discovery to deployment, here's what working with us actually looks like." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -73,7 +73,6 @@
       z-index: 0;
     }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -128,7 +127,6 @@
       padding: 0 48px;
     }
 
-    /* ── SHARED TYPE ── */
     .section-label {
       font-family: var(--font-display);
       font-size: 11px;
@@ -161,7 +159,6 @@
     }
 
     .accent-word { color: var(--accent); }
-
     p { color: var(--text-dim); line-height: 1.75; }
 
     .btn-primary {
@@ -198,7 +195,6 @@
     }
     .btn-ghost:hover { border-color: var(--accent); transform: translateY(-1px); }
 
-    /* ── REVEAL ── */
     .reveal {
       opacity: 1;
       transform: translateY(0);
@@ -213,7 +209,6 @@
       transform: translateY(0);
     }
 
-    /* ── PAGE HERO ── */
     .page-hero {
       padding: 160px 0 80px;
       border-bottom: 1px solid var(--border);
@@ -235,22 +230,62 @@
       max-width: 640px;
     }
 
-    /* ── CASE STUDIES GRID ── */
-    #case-studies {
+    /* ── PROCESS STEPS ── */
+    #process {
       padding: 100px 0;
+      border-bottom: 1px solid var(--border);
     }
 
-    .case-studies-intro {
-      margin-bottom: 80px;
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 64px;
     }
 
-    .case-studies-grid {
+    .process-step {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .process-step:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .process-number {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .process-step h3 { margin-bottom: 12px; }
+
+    .process-step p {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ── EXAMPLE ENGAGEMENTS ── */
+    #examples { padding: 100px 0; }
+
+    .examples-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 48px;
+      margin-top: 64px;
     }
 
-    .case-study-card {
+    .example-card {
       background: var(--bg2);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -261,16 +296,16 @@
       gap: 64px;
       align-items: start;
     }
-    .case-study-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .example-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
 
-    .case-study-header {
+    .example-header {
       display: flex;
       align-items: flex-start;
       gap: 16px;
       margin-bottom: 28px;
     }
 
-    .case-study-icon {
+    .example-icon {
       width: 60px;
       height: 60px;
       border-radius: 12px;
@@ -283,11 +318,9 @@
       flex-shrink: 0;
     }
 
-    .case-study-meta {
-      flex: 1;
-    }
+    .example-meta { flex: 1; }
 
-    .case-study-company {
+    .example-type {
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1px;
@@ -296,17 +329,15 @@
       margin-bottom: 4px;
     }
 
-    .case-study-role {
+    .example-desc {
       font-size: 14px;
       color: var(--text-dim);
       font-weight: 300;
     }
 
-    .case-study-section {
-      margin-bottom: 28px;
-    }
+    .example-section { margin-bottom: 28px; }
 
-    .case-study-section-title {
+    .example-section-title {
       font-family: var(--font-display);
       font-size: 12px;
       font-weight: 600;
@@ -316,20 +347,20 @@
       margin-bottom: 10px;
     }
 
-    .case-study-section p {
+    .example-section p {
       font-size: 14px;
       color: var(--text-dim);
       line-height: 1.65;
       font-weight: 300;
     }
 
-    .case-study-results {
+    .example-outcomes {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
 
-    .result-item {
+    .outcome-item {
       padding: 12px 0;
       border-bottom: 1px solid var(--border);
       font-size: 14px;
@@ -337,16 +368,14 @@
       font-weight: 300;
     }
 
-    .result-item:last-child {
-      border-bottom: none;
-    }
+    .outcome-item:last-child { border-bottom: none; }
 
-    .result-highlight {
+    .outcome-highlight {
       color: var(--accent);
       font-weight: 500;
     }
 
-    .case-study-timeline {
+    .example-timeline {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -355,26 +384,18 @@
       margin-top: 28px;
     }
 
-    .timeline-icon {
-      color: var(--accent);
-      font-size: 16px;
-    }
-
-    .timeline-text {
-      font-size: 13px;
-      color: var(--text-dim);
-      font-weight: 300;
-    }
+    .timeline-icon { color: var(--accent); font-size: 16px; }
+    .timeline-text { font-size: 13px; color: var(--text-dim); font-weight: 300; }
 
     /* ── CTA ── */
-    #case-studies-cta {
+    #page-cta {
       padding: 100px 0;
       text-align: center;
       border-top: 1px solid var(--border);
     }
 
-    #case-studies-cta h2 { margin-bottom: 16px; }
-    #case-studies-cta p { font-size: 17px; margin-bottom: 40px; font-weight: 300; }
+    #page-cta h2 { margin-bottom: 16px; }
+    #page-cta p { font-size: 17px; margin-bottom: 40px; font-weight: 300; }
 
     .cta-actions {
       display: flex;
@@ -383,7 +404,6 @@
       flex-wrap: wrap;
     }
 
-    /* ── FOOTER ── */
     footer {
       padding: 40px 48px;
       border-top: 1px solid var(--border);
@@ -413,21 +433,23 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--text); }
-
     .footer-copy { font-size: 12px; color: var(--text-muted); }
 
-    /* ── MOBILE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
       .container { padding: 0 24px; }
       .page-hero { padding: 120px 0 60px; }
-      .case-study-card { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
-      #case-studies { padding: 80px 0; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .example-card { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
+      #examples { padding: 80px 0; }
       footer { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
     }
 
-    /* ── MOBILE NAV (pure CSS checkbox hack) ── */
+    @media (max-width: 480px) {
+      .process-grid { grid-template-columns: 1fr; }
+    }
+
     #nav-toggle { display: none; }
 
     .nav-label {
@@ -469,9 +491,7 @@
         text-align: center;
         border-bottom: 1px solid rgba(255,255,255,0.07);
       }
-      .nav-links li:first-child {
-        border-top: 1px solid rgba(255,255,255,0.07);
-      }
+      .nav-links li:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
       .nav-links li a {
         display: block;
         padding: 20px 40px !important;
@@ -481,10 +501,7 @@
         letter-spacing: 0.3px;
         text-decoration: none;
       }
-      .nav-links li:last-child {
-        border-bottom: none;
-        margin-top: 32px;
-      }
+      .nav-links li:last-child { border-bottom: none; margin-top: 32px; }
       .nav-links .nav-cta {
         display: inline-block !important;
         padding: 14px 40px !important;
@@ -496,161 +513,190 @@
       #nav-toggle:checked ~ nav .nav-label span:nth-child(2) { opacity: 0; }
       #nav-toggle:checked ~ nav .nav-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     }
-
   </style>
 </head>
 <body>
 <div class="grid-bg"></div>
 
-<!-- NAV -->
 <input type="checkbox" id="nav-toggle" aria-hidden="true">
 <nav>
   <a href="/index.html" class="nav-logo">Utilis<span>.</span>Tech</a>
-    <label class="nav-label" for="nav-toggle" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </label>
+  <label class="nav-label" for="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></label>
   <ul class="nav-links">
     <li><a href="/index.html#services">Services</a></li>
     <li><a href="/solutions.html">Solutions</a></li>
-    <li><a href="/case-studies.html">Case Studies</a></li>
+    <li><a href="/how-we-work.html">How We Work</a></li>
     <li><a href="/about.html">About</a></li>
     <li><a href="/contact.html">Contact</a></li>
     <li><a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="nav-cta">Book a Call</a></li>
-  </ul></nav>
+  </ul>
+</nav>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
     <div>
-      <p class="section-label reveal">Case Studies</p>
-      <h1 class="reveal">Real results for real businesses.</h1>
-      <p class="reveal">Every project starts with a problem worth solving. Here's how we've helped UK organisations across different sectors adopt AI safely, understand the impact, and actually use it.</p>
+      <p class="section-label reveal">How We Work</p>
+      <h1 class="reveal">What working with us <span class="accent-word">actually</span> looks like.</h1>
+      <p class="reveal">Every engagement follows the same principles: understand first, build second, measure everything. Here's our process and three examples of the kind of work we do.</p>
     </div>
   </div>
 </section>
 
-<!-- PLACEHOLDER CASE STUDIES — replace with real client stories -->
-<!-- CASE STUDIES -->
-<section id="case-studies">
+<section id="process">
   <div class="container">
-    <div class="case-studies-grid">
+    <div class="reveal" style="text-align: center;">
+      <p class="section-label">Our Process</p>
+      <h2>Four steps. No surprises.</h2>
+    </div>
 
-      <!-- CASE STUDY 1: Financial Services -->
-      <div class="case-study-card reveal">
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <span class="process-number">01</span>
+        <h3>Discovery</h3>
+        <p>We start with your business, not the technology. A focused session to understand your workflows, pain points, data landscape, and what success actually looks like for you.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-number">02</span>
+        <h3>Assessment</h3>
+        <p>We map what's viable, what's valuable, and what needs sorting first. You get an honest view of AI readiness, risks, and a prioritised list of opportunities.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-number">03</span>
+        <h3>Build &amp; Deploy</h3>
+        <p>We build the solution — whether that's a custom AI tool, a workflow automation, or a governed Copilot rollout — integrated into your existing environment.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-number">04</span>
+        <h3>Measure &amp; Support</h3>
+        <p>We track the outcomes we agreed upfront. Monthly support is available to optimise, troubleshoot, and identify new opportunities as your confidence grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="examples">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 0;">
+      <p class="section-label">Example Engagements</p>
+      <h2>The kind of work we <span class="accent-word">do.</span></h2>
+      <p style="max-width: 640px; margin: 16px auto 0; font-size: 16px; font-weight: 300;">These are representative examples of typical engagements. Every project is different, but this gives you a sense of our approach and what you can expect.</p>
+    </div>
+
+    <div class="examples-grid">
+
+      <div class="example-card reveal">
         <div>
-          <div class="case-study-header">
-            <div class="case-study-icon">💼</div>
-            <div class="case-study-meta">
-              <p class="case-study-company">Financial Services</p>
-              <p class="case-study-role">Mid-size advisory firm, ~50 employees, London</p>
+          <div class="example-header">
+            <div class="example-icon">💼</div>
+            <div class="example-meta">
+              <p class="example-type">AI Readiness Assessment</p>
+              <p class="example-desc">Financial services firm, ~50 employees</p>
             </div>
           </div>
 
-          <div class="case-study-section">
-            <p class="case-study-section-title">The Challenge</p>
-            <p>Wanted to adopt AI but worried about compliance, data handling, and where to start. No clear roadmap or understanding of which processes were suitable for automation.</p>
+          <div class="example-section">
+            <p class="example-section-title">The Scenario</p>
+            <p>A mid-size advisory firm knows AI matters but has no clear roadmap. They're worried about compliance, unsure which processes are suitable, and don't want to waste budget on the wrong tools.</p>
           </div>
 
-          <div class="case-study-section">
-            <p class="case-study-section-title">Our Approach</p>
-            <p>Half-day discovery workshop, process mapping across core workflows, data readiness review, and a prioritised roadmap. We identified governance requirements and compliance considerations upfront.</p>
+          <div class="example-section">
+            <p class="example-section-title">Our Approach</p>
+            <p>Half-day discovery workshop, process mapping across core workflows, data readiness review, and a prioritised roadmap. Governance requirements and compliance considerations addressed upfront — before any tools are selected.</p>
           </div>
         </div>
 
         <div>
-          <div class="case-study-section">
-            <p class="case-study-section-title">Results</p>
-            <div class="case-study-results">
-              <div class="result-item">Clear <span class="result-highlight">6-month AI adoption plan</span> delivered</div>
-              <div class="result-item"><span class="result-highlight">3 high-impact processes</span> identified for automation</div>
-              <div class="result-item"><span class="result-highlight">Governance framework</span> in place before any AI tools deployed</div>
-              <div class="result-item">Team confidence increased — ready to move forward safely</div>
+          <div class="example-section">
+            <p class="example-section-title">Typical Outcomes</p>
+            <div class="example-outcomes">
+              <div class="outcome-item">Clear <span class="outcome-highlight">6-month AI adoption plan</span> with priorities</div>
+              <div class="outcome-item"><span class="outcome-highlight">3–5 high-impact processes</span> identified for automation</div>
+              <div class="outcome-item"><span class="outcome-highlight">Governance framework</span> in place before any AI tools deployed</div>
+              <div class="outcome-item">Team aligned on where AI fits — and where it doesn't</div>
             </div>
           </div>
 
-          <div class="case-study-timeline">
+          <div class="example-timeline">
             <span class="timeline-icon">⏱️</span>
-            <span class="timeline-text"><strong>Timeline:</strong> 2 weeks</span>
+            <span class="timeline-text"><strong>Typical timeline:</strong> 1–2 weeks</span>
           </div>
         </div>
       </div>
 
-      <!-- CASE STUDY 2: Professional Services -->
-      <div class="case-study-card reveal">
+      <div class="example-card reveal">
         <div>
-          <div class="case-study-header">
-            <div class="case-study-icon">⚖️</div>
-            <div class="case-study-meta">
-              <p class="case-study-company">Professional Services</p>
-              <p class="case-study-role">Legal firm, ~120 employees, Manchester</p>
+          <div class="example-header">
+            <div class="example-icon">⚖️</div>
+            <div class="example-meta">
+              <p class="example-type">Custom Document Intelligence</p>
+              <p class="example-desc">Professional services firm, ~120 employees</p>
             </div>
           </div>
 
-          <div class="case-study-section">
-            <p class="case-study-section-title">The Challenge</p>
-            <p>Associates spending 15+ hours per week manually reviewing and summarising client documents. Inconsistent output, human error, and a bottleneck affecting fee earner utilisation.</p>
+          <div class="example-section">
+            <p class="example-section-title">The Scenario</p>
+            <p>Staff spending 15+ hours a week manually reviewing and summarising client documents. Inconsistent output, human error, and a bottleneck that affects fee earner utilisation and client turnaround.</p>
           </div>
 
-          <div class="case-study-section">
-            <p class="case-study-section-title">Our Approach</p>
-            <p>Built a custom AI tool that reads incoming documents, categorises them by type, extracts key facts, and produces summaries with human-in-the-loop review. Full audit trail for compliance and client confidence.</p>
+          <div class="example-section">
+            <p class="example-section-title">Our Approach</p>
+            <p>Build a custom AI tool that reads incoming documents, categorises them by type, extracts key facts, and produces summaries — with human-in-the-loop review built in. Full audit trail for compliance and client confidence.</p>
           </div>
         </div>
 
         <div>
-          <div class="case-study-section">
-            <p class="case-study-section-title">Results</p>
-            <div class="case-study-results">
-              <div class="result-item"><span class="result-highlight">60% reduction</span> in document processing time</div>
-              <div class="result-item"><span class="result-highlight">Consistent output quality</span> — no more variation between staff</div>
-              <div class="result-item">Full <span class="result-highlight">audit trail</span> for compliance and client review</div>
-              <div class="result-item">Associates freed up for higher-value work</div>
+          <div class="example-section">
+            <p class="example-section-title">Typical Outcomes</p>
+            <div class="example-outcomes">
+              <div class="outcome-item"><span class="outcome-highlight">60%+ reduction</span> in document processing time</div>
+              <div class="outcome-item"><span class="outcome-highlight">Consistent output quality</span> — no variation between staff</div>
+              <div class="outcome-item">Full <span class="outcome-highlight">audit trail</span> for compliance and client review</div>
+              <div class="outcome-item">Staff freed up for higher-value advisory work</div>
             </div>
           </div>
 
-          <div class="case-study-timeline">
+          <div class="example-timeline">
             <span class="timeline-icon">⏱️</span>
-            <span class="timeline-text"><strong>Timeline:</strong> 6 weeks</span>
+            <span class="timeline-text"><strong>Typical timeline:</strong> 4–6 weeks</span>
           </div>
         </div>
       </div>
 
-      <!-- CASE STUDY 3: Retail -->
-      <div class="case-study-card reveal">
+      <div class="example-card reveal">
         <div>
-          <div class="case-study-header">
-            <div class="case-study-icon">🛍️</div>
-            <div class="case-study-meta">
-              <p class="case-study-company">Retail & E-Commerce</p>
-              <p class="case-study-role">E-commerce retailer, ~30 employees, Birmingham</p>
+          <div class="example-header">
+            <div class="example-icon">🛍️</div>
+            <div class="example-meta">
+              <p class="example-type">AI Training &amp; Adoption</p>
+              <p class="example-desc">Retail or e-commerce business, ~30 employees</p>
             </div>
           </div>
 
-          <div class="case-study-section">
-            <p class="case-study-section-title">The Challenge</p>
-            <p>Team had heard about AI but had no idea how to use it safely or effectively. No clear policies, worried about data risks, and uncertain which tools were appropriate for their work.</p>
+          <div class="example-section">
+            <p class="example-section-title">The Scenario</p>
+            <p>The team has heard about AI but has no idea how to use it safely or effectively. No policies in place, worried about data risks, and uncertain which tools are appropriate for their work.</p>
           </div>
 
-          <div class="case-study-section">
-            <p class="case-study-section-title">Our Approach</p>
-            <p>Full-day training workshop with hands-on exercises using real workflows. Created an approved tools list and AI usage policy aligned with data safety requirements. Follow-up sessions to measure adoption and identify new opportunities.</p>
+          <div class="example-section">
+            <p class="example-section-title">Our Approach</p>
+            <p>Full-day training workshop with hands-on exercises using real workflows. We create an approved tools list and AI usage policy aligned with data safety requirements. Follow-up sessions measure adoption and identify new opportunities.</p>
           </div>
         </div>
 
         <div>
-          <div class="case-study-section">
-            <p class="case-study-section-title">Results</p>
-            <div class="case-study-results">
-              <div class="result-item"><span class="result-highlight">80% of team</span> actively using AI tools within 4 weeks</div>
-              <div class="result-item">Clear <span class="result-highlight">data safety guidelines</span> embedded in everyday practice</div>
-              <div class="result-item"><span class="result-highlight">2 new process automations</span> identified by staff themselves</div>
-              <div class="result-item">Confidence and momentum to continue improving</div>
+          <div class="example-section">
+            <p class="example-section-title">Typical Outcomes</p>
+            <div class="example-outcomes">
+              <div class="outcome-item"><span class="outcome-highlight">80%+ of team</span> actively using AI tools within 4 weeks</div>
+              <div class="outcome-item">Clear <span class="outcome-highlight">data safety guidelines</span> embedded in everyday practice</div>
+              <div class="outcome-item"><span class="outcome-highlight">New process improvements</span> identified by staff themselves</div>
+              <div class="outcome-item">Confidence and momentum to continue improving</div>
             </div>
           </div>
 
-          <div class="case-study-timeline">
+          <div class="example-timeline">
             <span class="timeline-icon">⏱️</span>
-            <span class="timeline-text"><strong>Timeline:</strong> 1 day workshop + 2 weeks follow-up</span>
+            <span class="timeline-text"><strong>Typical timeline:</strong> 1 day workshop + 2 weeks follow-up</span>
           </div>
         </div>
       </div>
@@ -659,8 +705,7 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section id="case-studies-cta">
+<section id="page-cta">
   <div class="container">
     <p class="section-label reveal">Get In Touch</p>
     <h2 class="reveal">Let's have a <span class="accent-word">conversation.</span></h2>
@@ -677,21 +722,22 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <a href="/index.html" class="footer-logo">Utilis<span>.</span>Tech</a>
   <ul class="footer-links">
     <li><a href="/index.html#services">Services</a></li>
     <li><a href="/solutions.html">Solutions</a></li>
-    <li><a href="/case-studies.html">Case Studies</a></li>
+    <li><a href="/how-we-work.html">How We Work</a></li>
     <li><a href="/about.html">About</a></li>
     <li><a href="/contact.html">Contact</a></li>
     <li><a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener">LinkedIn</a></li>
     <li><a href="/privacy-policy.html">Privacy Policy</a></li>
   </ul>
-  <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p></footer>
+  <p class="footer-copy">&copy; 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p>
+</footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
   document.body.classList.add('js-loaded');
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
