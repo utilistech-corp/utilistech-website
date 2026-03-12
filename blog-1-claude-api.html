@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why the Claude API is the right foundation for UK business AI tools — Utilis Technologies</title>
-  <meta name="description" content="Anthropic's safety-first approach and enterprise-grade API make Claude the most suitable model for businesses operating under strict data governance requirements." />
+  <title>How to choose the right AI model for your business — Utilis Technologies</title>
+  <meta name="description" content="Evaluating large language models for business use? Here's how to assess safety, data handling, consistency, and cost — and why the choice matters more than you think." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -155,13 +155,13 @@
     <span></span><span></span><span></span>
   </label>
   <ul class="nav-links">
-    <li><a href="/#services">Services</a></li>
-    <li><a href="/#process">How It Works</a></li>
-    <li><a href="/#why">Why Us</a></li>
-    <li><a href="/#insights">Insights</a></li>
-    <li><a href="/#cta" class="nav-cta">Get in Touch</a></li>
-  </ul>
-</nav>
+    <li><a href="/index.html#services">Services</a></li>
+    <li><a href="/solutions.html">Solutions</a></li>
+    <li><a href="/case-studies.html">Case Studies</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="nav-cta">Book a Call</a></li>
+  </ul></nav>
 
 <div class="article-wrap">
   <a href="/#insights" class="back-link">
@@ -169,8 +169,8 @@
     Back to Insights
   </a>
 
-  <div class="article-cat">Claude API</div>
-  <h1 class="article-title">Why the Claude API is the right foundation for UK business AI tools</h1>
+  <div class="article-cat">AI Foundation</div>
+  <h1 class="article-title">How to choose the right AI model for your business</h1>
   <div class="article-meta">
     <span class="article-date">February 2026</span>
     <div class="article-dot"></div>
@@ -180,68 +180,62 @@
   <div class="prose">
     <p>When a business decides to embed AI into its operations, the first and most consequential decision is which model to build on. Choose wrong and you'll spend the next eighteen months unpicking a foundation that doesn't meet your governance requirements, can't be audited, or simply doesn't perform consistently enough to trust with real business processes.</p>
 
-    <p>We've evaluated the main options — OpenAI's GPT-4 family, Google's Gemini, Meta's open-source Llama models, and Anthropic's Claude. For UK businesses operating under GDPR, with real data governance obligations and a need for consistent, controllable behaviour from their AI systems, Claude consistently emerges as the right foundation. Here's why.</p>
+    <p>The market now has several serious options — OpenAI's GPT-4, Google's Gemini, Anthropic's Claude, and open-source models like Llama. Each has genuine strengths. But for UK businesses operating under GDPR, with real data governance obligations and a need for consistent, controllable behaviour from their AI systems, the selection criteria are clear. This guide walks you through how to evaluate them — and why the choice matters.</p>
 
-    <h2>The safety architecture is built in, not bolted on</h2>
+    <h2>Criterion 1: Safety and reliability architecture</h2>
 
-    <p>Anthropic was founded specifically to research safe and reliable AI. That isn't a marketing position — it shapes how the model is trained and how it behaves. Claude is developed using a technique called Constitutional AI, which means the model's values and behaviour constraints are baked into training rather than applied as a filter on top of outputs.</p>
+    <p>Different models handle safety differently. Some use Constitutional AI (where safety constraints are built into training). Others apply safety measures as a layer on top of the base model. This matters because it affects how the model behaves in edge cases — particularly with sensitive business data.</p>
 
-    <p>In practical terms, this matters when you're building tools that handle sensitive business data. Claude is less likely to produce confident but incorrect outputs (what the industry calls "hallucinations"), more likely to say it doesn't know something rather than fabricate an answer, and more consistent in refusing to do things it shouldn't — whether that's leaking data it's been given in context or generating outputs that could expose your business to risk.</p>
+    <p>The practical question: is the model less likely to produce confident but incorrect outputs ("hallucinations")? Will it say "I don't know" rather than fabricate an answer? Is it consistent in refusing to do things it shouldn't — whether that's leaking data or generating outputs that expose your business to risk?</p>
 
-    <p>For a client document processing tool, a customer-facing assistant, or an internal knowledge base query system, that reliability isn't a nice-to-have. It's the difference between a tool your team trusts and one they quietly stop using.</p>
+    <p>For a document processing tool, customer-facing assistant, or internal knowledge system, this reliability isn't incidental. It's the difference between a tool your team trusts and one they quietly stop using. Evaluate models on their documented approach to safety training and their real-world track record in your use case.</p>
 
-    <h2>Data handling that UK businesses can actually rely on</h2>
+    <h2>Criterion 2: Data handling and compliance</h2>
 
     <p>This is where many AI tools fall apart in a UK business context. GDPR isn't optional, and the ICO takes data mishandling seriously. When you send data through an AI API, you need clarity on what happens to it — whether it's used to train future models, where it's stored, for how long, and under what legal basis.</p>
 
-    <p>Anthropic's API terms are explicit: <strong>data submitted via the API is not used to train Claude by default.</strong> This is a critical distinction from consumer-facing AI products, where your inputs may feed back into model training. Enterprise-grade data processing agreements are available, and Anthropic maintains data processing infrastructure in AWS regions that can satisfy most UK data residency requirements.</p>
+    <p>Look for explicit API terms that commit to not using your data for model training. Some providers do this clearly; others make it optional or buried in fine print. Enterprise-grade data processing agreements should be available, and the provider should maintain infrastructure in UK or EU regions that satisfy your data residency requirements.</p>
 
-    <p>When we build custom AI tools for clients, we document every data flow — what goes into the API call, what comes back, what gets stored and where. Claude's clear data handling policies make that documentation straightforward and defensible.</p>
+    <p>When we build custom AI tools for clients, we document every data flow — what goes into the API call, what comes back, what gets stored and where. This is only possible if the provider's terms are genuinely clear and committed. If you're still uncertain about data handling after reading the policy, it's a red flag.</p>
 
-    <h2>Consistency and controllability for business workflows</h2>
+    <h2>Criterion 3: Consistency and controllability</h2>
 
     <p>Business processes require predictable outputs. If you're automating the triage of customer support emails, you need the AI to categorise them consistently — not to behave differently depending on subtle phrasing variations, or to change behaviour after a model update.</p>
 
-    <p>The Claude API gives developers significant control over model behaviour through system prompts, temperature settings, and structured output formats. You can constrain Claude's responses to a defined schema, instruct it to behave in very specific ways for specific contexts, and version-lock to particular model releases so a background update doesn't change the behaviour of a production tool overnight.</p>
+    <p>Evaluate how much control the API gives you over model behaviour. Can you use system prompts to define specific instructions? Are there options for temperature and other parameters to tune consistency? Can you constrain responses to structured output formats (JSON schemas)? Can you version-lock to specific model releases so updates don't break production tools?</p>
 
-    <p>We've found Claude particularly strong at following complex, multi-step instructions without losing the thread — which is essential for document processing, structured data extraction, and any workflow where the AI needs to apply several rules simultaneously.</p>
+    <p>Some models are stronger at following complex, multi-step instructions without losing the thread — which is essential for document processing, structured data extraction, and workflows where the AI needs to apply several rules simultaneously. Test this with your actual use case before committing.</p>
 
-    <h2>The context window advantage</h2>
+    <h2>Criterion 4: Context window size</h2>
 
-    <p>Claude's context window — the amount of text it can process in a single interaction — is among the largest available. This has real practical implications for business tools. It means you can feed an entire contract, a full email thread, a lengthy policy document, or a batch of invoices into a single API call and get coherent analysis across the whole thing.</p>
+    <p>Context window is the amount of text a model can process in a single interaction. This has real practical implications for business tools. A large context window means you can feed an entire contract, a full email thread, a lengthy policy document, or a batch of invoices into a single API call and get coherent analysis across the whole thing.</p>
 
-    <p>Smaller context windows force you to chunk documents, manage state across multiple API calls, and build significantly more complex applications to achieve the same result. For most UK SME use cases — processing supplier contracts, summarising board papers, extracting data from application forms — Claude's context window handles the job in a single pass.</p>
+    <p>Smaller context windows force you to chunk documents, manage state across multiple API calls, and build significantly more complex applications to achieve the same result. For most UK SME use cases — processing supplier contracts, summarising board papers, extracting data from application forms — a large context window (200K+ tokens) handles the job in a single pass and makes the build simpler.</p>
 
-    <h2>What this means in practice</h2>
+    <h2>Criterion 5: Cost and performance trade-offs</h2>
 
-    <p>When we scope a new AI tool for a client, the conversation about which model to use usually ends quickly. Claude is our default recommendation for most business applications because:</p>
+    <p>Cheaper doesn't mean better for business applications. Compare pricing per token, but weight that against output quality, reliability, and the hidden costs of needing more complex application code to work around limitations. Sometimes paying more for a more capable model saves money overall by reducing the engineering required.</p>
 
-    <ul>
-      <li>The data handling commitments satisfy GDPR requirements without needing complex workarounds</li>
-      <li>The output consistency reduces the QA overhead on production tools</li>
-      <li>The large context window simplifies architecture for document-heavy workflows</li>
-      <li>The safety characteristics mean tools behave predictably even when users try to push them in unintended directions</li>
-      <li>Anthropic's enterprise support and SLAs are appropriate for business-critical applications</li>
-    </ul>
+    <p>Consider the actual cost of an unreliable output in your use case. If a support email is miscategorised, what's the cost? If a document extraction misses a key field, how much manual rework does that create? These hidden costs often dwarf the API pricing difference.</p>
 
-    <p>There are cases where a different model makes sense — for certain multimodal tasks, for cost optimisation on very high-volume simple queries, or where a client already has a significant investment in another provider's ecosystem. But for the core use case of building reliable, governed, custom AI tools for UK businesses, Claude is where we start.</p>
+    <h2>Making the choice</h2>
+
+    <p>Evaluate each model against these five criteria. You'll often find that no single model is ideal for all metrics — but you can identify which factors matter most for your specific use case. A high-volume, low-stakes query system might prioritise cost; a compliance-critical workflow prioritises auditability and data handling. The tool that's right for one business isn't necessarily right for another.</p>
 
     <div class="callout">
-      <p><strong>A note on cost.</strong> Claude API pricing is broadly comparable to alternatives at similar capability levels. For business tools where accuracy and reliability are the primary concern, optimising for the cheapest model is usually a false economy — the cost of an unreliable output in a real business process far exceeds the API cost difference.</p>
+      <p><strong>Pro tip:</strong> Don't commit to a model for your entire product roadmap based on a POC with one use case. Pilot your top two options with realistic data volumes and genuine production constraints before deciding. The cost of testing at this stage is trivial compared to the cost of migrating the wrong foundation later.</p>
     </div>
 
-    <h2>Getting started</h2>
+    <p>If you're evaluating AI models for your business and want a clear assessment of what's actually achievable with each option — and what it would cost and take to build — we offer a no-obligation discovery conversation. We'll walk through your use case against these criteria, help you pilot the top options, and give you a straight recommendation based on your specific needs.</p>
 
-    <p>If you're exploring AI tools for your business and want to understand what's actually achievable with the Claude API — and what it would cost and take to build — we offer a no-obligation discovery conversation. We'll give you a straight assessment of whether a custom AI tool is the right approach, or whether an off-the-shelf solution would serve you better.</p>
-
-    <p>The AI integration space moves quickly, and the gap between businesses that build good AI habits now and those that wait is widening. But it doesn't have to be complicated or expensive to start.</p>
+    <p>The AI integration space moves quickly, and the gap between businesses that make smart foundation choices now and those that don't is widening. But it doesn't have to be complicated or expensive to evaluate properly.</p>
   </div>
 
   <div class="article-cta">
-    <h3>Ready to explore what Claude can do for your business?</h3>
-    <p>Book a free 60-minute discovery call. No pitch, no pressure — just a clear-eyed conversation about what's possible.</p>
+    <h3>Not sure which model to choose?</h3>
+    <p>Let's evaluate your requirements against these criteria and help you pilot the right option. Book a free 60-minute call — no pitch, just a clear assessment of what makes sense for your business.</p>
     <a href="mailto:contact@utilistech.co.uk" class="btn-primary">
-      Get in Touch
+      Book a Discovery Call
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
     </a>
   </div>
@@ -249,7 +243,7 @@
 
 <footer>
   <a href="/" class="footer-logo">Utilis<span>.</span>Tech</a>
-  <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales.</p>
+<p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p>
 </footer>
 
   <script>
