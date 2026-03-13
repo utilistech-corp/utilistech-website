@@ -1436,7 +1436,7 @@
         <p class="section-label">Insights</p>
         <h2>Thinking out loud on AI.</h2>
       </div>
-      <a href="#" class="btn-ghost">All Articles →</a>
+
     </div>
 
     <div class="blog-grid">
@@ -1514,7 +1514,7 @@
         <p class="contact-option-desc">Prefer to reach out directly? Drop us a message and we'll get back to you within one business day.</p>
         <div style="display:flex; flex-direction:column; gap:12px; margin-top: auto;">
           <a href="#" onclick="window.location='mai'+'lto:contact@utilistech.co.uk'; return false;" class="btn-ghost" style="justify-content:center;">
-            <span class="__cf_email__" data-cfemail="e3808c8d97828097a396978a8f8a909786808bcd808ccd9688">[email&#160;protected]</span>
+            contact@utilistech.co.uk
           </a>
           <a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener" class="btn-ghost" style="justify-content:center;">
             Connect on LinkedIn
@@ -1541,7 +1541,7 @@
   </ul>
   <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Mark JS as loaded so reveal animations activate
   document.body.classList.add('js-loaded');
 
@@ -1555,7 +1555,9 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 
+  }, { threshold: 0.15 });
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 <script>
   window.chatbaseConfig = {
