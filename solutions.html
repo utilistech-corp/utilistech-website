@@ -72,8 +72,8 @@
 
     /* REVEAL */
     .reveal{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease}
-    body.jsl .reveal{opacity:0;transform:translateY(24px)}
-    body.jsl .reveal.visible{opacity:1;transform:translateY(0)}
+    body.js-loaded .reveal{opacity:0;transform:translateY(24px)}
+    body.js-loaded .reveal.visible{opacity:1;transform:translateY(0)}
 
     /* HERO */
     .hero{padding:160px 0 100px;border-bottom:1px solid var(--border);text-align:center}
@@ -748,9 +748,17 @@
   <p class="fcopy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  document.body.classList.add('jsl');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.i
+<script>
+  document.body.classList.add('js-loaded');
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 </html>
