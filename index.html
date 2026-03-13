@@ -30,7 +30,7 @@
       --border-hover: rgba(255,255,255,0.15);
       --text: #e8e8e8;
       --text-muted: #666;
-      --text-dim: #999;
+      --text-dim: #b0b0b0;
       --accent: #00c2a8;
       --accent2: #0090ff;
       --accent-glow: rgba(0, 194, 168, 0.15);
@@ -720,24 +720,49 @@
 
     .blog-thumb {
       height: 180px;
-      background: var(--bg3);
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end;
+      justify-content: flex-start;
       border-bottom: 1px solid var(--border);
       position: relative;
       overflow: hidden;
+      padding: 24px;
     }
 
-    .blog-thumb-icon {
-      font-size: 48px;
-      opacity: 0.15;
+    .blog-thumb--automation {
+      background: linear-gradient(135deg, #0a2e2a 0%, #0d3d47 50%, #0a1a2e 100%);
+    }
+    .blog-thumb--governance {
+      background: linear-gradient(135deg, #1a0a2e 0%, #0d2847 50%, #0a2e2a 100%);
+    }
+    .blog-thumb--strategy {
+      background: linear-gradient(135deg, #0a1a2e 0%, #0d3847 50%, #0a2e1e 100%);
+    }
+
+    .blog-thumb-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      position: relative;
+      z-index: 1;
     }
 
     .blog-thumb-glow {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 50% 80%, rgba(0,194,168,0.1) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 80% 20%, rgba(0,194,168,0.12) 0%, transparent 60%);
+    }
+
+    .blog-thumb-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
 
     .blog-body { padding: 28px; }
@@ -1089,24 +1114,24 @@
   <div class="hero-glow"></div>
   <div class="hero-glow-2"></div>
   <div class="container">
-    <div class="hero-eyebrow">AI Integration · Trusted by UK Businesses</div>
+    <div class="hero-eyebrow">AI Integration · UK Businesses</div>
     <h1>Make AI work<br /><span class="accent-word">safely</span><br />for your business.</h1>
-    <p class="hero-sub">We help businesses adopt AI the right way — with clear strategy, safe implementation, and tools that actually fit how your team works. No hype, no black boxes, no unnecessary risk.</p>
+    <p class="hero-sub">I help businesses adopt AI the right way — with clear strategy, safe implementation, and tools that actually fit how your team works. No hype, no black boxes, no unnecessary risk.</p>
     <div class="hero-actions">
       <a href="#cta" class="btn-primary">
         Book a Free Call
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#services" class="btn-ghost">See Our Services</a>
+      <a href="#services" class="btn-ghost">See What I Do</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">4<span>+</span></div>
-        <div class="stat-label">AI Solutions</div>
+        <div class="stat-num">25<span>+</span></div>
+        <div class="stat-label">Years in IT</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">Safe<span>.</span></div>
-        <div class="stat-label">AI You Can Trust</div>
+        <div class="stat-num">M365<span>.</span></div>
+        <div class="stat-label">& Azure Certified</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">UK<span>.</span></div>
@@ -1116,33 +1141,15 @@
   </div>
 </section>
 
-<!-- MARQUEE -->
+<!-- TECH STRIP -->
 <div class="marquee-strip">
-  <div class="marquee-track">
-    <span class="marquee-item">AI Strategy &amp; Readiness</span>
-    <span class="marquee-item">Custom AI Tools</span>
-    <span class="marquee-item">AI Policy &amp; Governance</span>
-    <span class="marquee-item">Workflow Automation</span>
-    <span class="marquee-item">AI Training &amp; Adoption</span>
-    <span class="marquee-item">Microsoft 365 AI</span>
-    <span class="marquee-item">Cyber Security</span>
-    <span class="marquee-item">Document Intelligence</span>
-    <span class="marquee-item">Cloud Infrastructure</span>
-    <span class="marquee-item">IT Consultancy</span>
-    <span class="marquee-item">Data-Safe AI</span>
-    <span class="marquee-item">Google Workspace AI</span>
-    <span class="marquee-item">AI Strategy &amp; Readiness</span>
-    <span class="marquee-item">Custom AI Tools</span>
-    <span class="marquee-item">AI Policy &amp; Governance</span>
-    <span class="marquee-item">Workflow Automation</span>
-    <span class="marquee-item">AI Training &amp; Adoption</span>
-    <span class="marquee-item">Microsoft 365 AI</span>
-    <span class="marquee-item">Cyber Security</span>
-    <span class="marquee-item">Document Intelligence</span>
-    <span class="marquee-item">Cloud Infrastructure</span>
-    <span class="marquee-item">IT Consultancy</span>
-    <span class="marquee-item">Data-Safe AI</span>
-    <span class="marquee-item">Google Workspace AI</span>
+  <div class="container" style="display:flex; justify-content:center; flex-wrap:wrap; gap:32px; padding:0 48px;">
+    <span class="marquee-item" style="animation:none;">Microsoft 365</span>
+    <span class="marquee-item" style="animation:none;">Azure</span>
+    <span class="marquee-item" style="animation:none;">Claude API</span>
+    <span class="marquee-item" style="animation:none;">Google Workspace</span>
+    <span class="marquee-item" style="animation:none;">Power Automate</span>
+    <span class="marquee-item" style="animation:none;">SharePoint</span>
   </div>
 </div>
 
@@ -1156,7 +1163,7 @@
         <p class="section-label">AI &amp; Automation</p>
         <h2>AI that fits your business — not the other way around.</h2>
       </div>
-      <p class="section-desc">We work with you to find where AI adds real value, build it safely, and make sure your team actually uses it.</p>
+      <p class="section-desc">I work with you to find where AI adds real value, build it safely, and make sure your team actually uses it.</p>
     </div>
 
     <div class="services-grid reveal">
@@ -1164,7 +1171,7 @@
         <span class="service-num">01</span>
         <div class="service-icon">⚡</div>
         <h3>AI Workflow Automation</h3>
-        <p class="service-desc">We look at how your team actually works — the repetitive tasks, the bottlenecks, the things that eat up time — and build AI-powered automations that handle them. The goal is freeing your people to focus on the work that matters.</p>
+        <p class="service-desc">I look at how your team actually works — the repetitive tasks, the bottlenecks, the things that eat up time — and build AI-powered automations that handle them. The goal is freeing your people to focus on the work that matters.</p>
         <div class="service-tags">
           <span class="tag">Process Mapping</span>
           <span class="tag">Automation Build</span>
@@ -1176,7 +1183,7 @@
         <span class="service-num">02</span>
         <div class="service-icon">🤖</div>
         <h3>Custom AI Tools</h3>
-        <p class="service-desc">Off-the-shelf AI tools don't always fit. We design and build bespoke AI applications tailored to your specific workflows, data, and team — using the safest and most capable AI models available.</p>
+        <p class="service-desc">Off-the-shelf AI tools don't always fit. I design and build bespoke AI applications tailored to your specific workflows, data, and team — using the safest and most capable AI models available.</p>
         <div class="service-tags">
           <span class="tag">Bespoke Solutions</span>
           <span class="tag">AI Development</span>
@@ -1188,7 +1195,7 @@
         <span class="service-num">03</span>
         <div class="service-icon">🔷</div>
         <h3>Microsoft 365 AI</h3>
-        <p class="service-desc">If your business runs on Microsoft 365, there's a huge amount of AI capability already built in — most businesses aren't using it. We help you unlock Copilot, Power Automate, and AI-enhanced workflows across your existing tools.</p>
+        <p class="service-desc">If your business runs on Microsoft 365, there's a huge amount of AI capability already built in — most businesses aren't using it. I help you unlock Copilot, Power Automate, and AI-enhanced workflows across your existing tools.</p>
         <div class="service-tags">
           <span class="tag">Microsoft Copilot</span>
           <span class="tag">Power Automate</span>
@@ -1200,7 +1207,7 @@
         <span class="service-num">04</span>
         <div class="service-icon">🎯</div>
         <h3>AI Readiness &amp; Strategy</h3>
-        <p class="service-desc">Not sure where AI fits in your business? We run a structured assessment — looking at your processes, your data, your team's readiness — and give you a clear, jargon-free roadmap for what to do first, what to avoid, and what the realistic return looks like.</p>
+        <p class="service-desc">Not sure where AI fits in your business? I run a structured assessment — looking at your processes, your data, your team's readiness — and give you a clear, jargon-free roadmap for what to do first, what to avoid, and what the realistic return looks like.</p>
         <div class="service-tags">
           <span class="tag">AI Readiness Audit</span>
           <span class="tag">Roadmapping</span>
@@ -1220,9 +1227,9 @@
     <div class="services-header reveal">
       <div>
         <p class="section-label">IT Infrastructure &amp; Security</p>
-        <h2>Solid foundations for everything we build.</h2>
+        <h2>Solid foundations for everything I build.</h2>
       </div>
-      <p class="section-desc">AI only works well when it sits on reliable infrastructure. We also deliver the cloud, networking, and security work that keeps everything running properly.</p>
+      <p class="section-desc">AI only works well when it sits on reliable infrastructure. I also deliver the cloud, networking, and security work that keeps everything running properly.</p>
     </div>
 
     <div class="infra-grid reveal">
@@ -1315,7 +1322,7 @@
       <div class="reveal">
         <p class="section-label">How It Works</p>
         <h2>From first call to full deployment.</h2>
-        <p class="section-desc" style="margin-top: 16px;">We keep it simple. Four stages, no ambiguity, no surprises.</p>
+        <p class="section-desc" style="margin-top: 16px;">I keep it simple. Four stages, no ambiguity, no surprises.</p>
       </div>
 
       <div class="process-steps reveal">
@@ -1330,21 +1337,21 @@
           <div class="step-num">02</div>
           <div>
             <div class="step-title">Assessment & Scoping</div>
-            <p class="step-text">We review your workflows, look at your data and systems, and identify the highest-impact opportunities for AI. You get a written report with a clear scope, timeline, and fixed cost — before any work begins.</p>
+            <p class="step-text">I review your workflows, look at your data and systems, and identify the highest-impact opportunities for AI. You get a written report with a clear scope, timeline, and fixed cost — before any work begins.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">03</div>
           <div>
             <div class="step-title">Build & Integrate</div>
-            <p class="step-text">We build your AI tools and automations step by step, with regular check-ins. Everything is documented, tested, and your team is trained before we hand it over.</p>
+            <p class="step-text">I build your AI tools and automations step by step, with regular check-ins. Everything is documented, tested, and your team is trained before I hand it over.</p>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">04</div>
           <div>
             <div class="step-title">Ongoing Support</div>
-            <p class="step-text">We don't disappear after go-live. Monthly support options are available — we monitor, improve, and help you find new AI opportunities as your business grows.</p>
+            <p class="step-text">I don't disappear after go-live. Monthly support options are available — I monitor, improve, and help you find new AI opportunities as your business grows.</p>
           </div>
         </div>
       </div>
@@ -1357,29 +1364,29 @@
   <div class="container">
     <div class="reveal" style="text-align: center; margin-bottom: 0;">
       <p class="section-label">Why Utilis</p>
-      <h2>Why businesses choose us.</h2>
+      <h2>Why businesses choose Utilis.</h2>
     </div>
 
     <div class="why-grid">
       <div class="why-card reveal">
         <span class="why-icon">🏗️</span>
         <div class="why-title">Infrastructure experience</div>
-        <p class="why-text">We come from IT infrastructure and security, not just software. That means AI solutions that fit your environment — properly governed, data-safe, and built to work from day one.</p>
+        <p class="why-text">I come from IT infrastructure and security, not just software. That means AI solutions that fit your environment — properly governed, data-safe, and built to work from day one.</p>
       </div>
       <div class="why-card reveal">
         <span class="why-icon">🇬🇧</span>
         <div class="why-title">UK-based, GDPR-fluent</div>
-        <p class="why-text">We understand UK data laws and the compliance landscape UK businesses operate in. Your data doesn't get fed into a black box. We're transparent about how every AI tool handles your information.</p>
+        <p class="why-text">I understand UK data laws and the compliance landscape UK businesses operate in. Your data doesn't get fed into a black box. I'm transparent about how every AI tool handles your information.</p>
       </div>
       <div class="why-card reveal">
         <span class="why-icon">🔬</span>
-        <div class="why-title">We build things</div>
-        <p class="why-text">Not resellers, not consultants pointing at off-the-shelf tools. If you need something custom — an AI-powered internal tool, an automated reporting system, a bespoke integration — we write the code.</p>
+        <div class="why-title">I build things</div>
+        <p class="why-text">Not a reseller, not a consultant pointing at off-the-shelf tools. If you need something custom — an AI-powered internal tool, an automated reporting system, a bespoke integration — I write the code.</p>
       </div>
       <div class="why-card reveal">
         <span class="why-icon">💬</span>
         <div class="why-title">Straight talking</div>
-        <p class="why-text">No hype, no inflated timelines, no upselling things you don't need. If AI isn't the right tool for something, we'll say so. We're in this for long-term relationships, not quick wins.</p>
+        <p class="why-text">No hype, no inflated timelines, no upselling things you don't need. If AI isn't the right tool for something, I'll say so. I'm in this for long-term relationships, not quick wins.</p>
       </div>
       <div class="why-card reveal">
         <span class="why-icon">🛡️</span>
@@ -1389,7 +1396,7 @@
       <div class="why-card reveal">
         <span class="why-icon">📈</span>
         <div class="why-title">Outcome-focused</div>
-        <p class="why-text">Every project has clear success measures agreed upfront. We track time saved, errors reduced, and processes improved. If we can't define what success looks like, we won't take the work on.</p>
+        <p class="why-text">Every project has clear success measures agreed upfront. I track time saved, errors reduced, and processes improved. If I can't define what success looks like, I won't take the work on.</p>
       </div>
     </div>
   </div>
@@ -1398,7 +1405,7 @@
 <section id="fit">
   <div class="container">
     <div class="reveal" style="text-align: center; margin-bottom: 0;">
-      <p class="section-label">Who We Work With</p>
+      <p class="section-label">Who I Work With</p>
       <h2>Is this you?</h2>
     </div>
 
@@ -1441,9 +1448,10 @@
 
     <div class="blog-grid">
       <a href="/blog-3-five-processes.html" class="blog-card reveal">
-        <div class="blog-thumb">
-          <span class="blog-thumb-icon">⚡</span>
+        <div class="blog-thumb blog-thumb--automation">
+          <div class="blog-thumb-grid"></div>
           <div class="blog-thumb-glow"></div>
+          <span class="blog-thumb-title">5 Processes to Automate First</span>
         </div>
         <div class="blog-body">
           <span class="blog-cat">Automation</span>
@@ -1456,9 +1464,10 @@
       </a>
 
       <a href="/blog-4-ai-policy.html" class="blog-card reveal">
-        <div class="blog-thumb">
-          <span class="blog-thumb-icon">🛡️</span>
+        <div class="blog-thumb blog-thumb--governance">
+          <div class="blog-thumb-grid"></div>
           <div class="blog-thumb-glow"></div>
+          <span class="blog-thumb-title">Your Business Needs an AI Policy</span>
         </div>
         <div class="blog-body">
           <span class="blog-cat">AI Governance</span>
@@ -1471,9 +1480,10 @@
       </a>
 
       <a href="/blog-5-ai-readiness.html" class="blog-card reveal">
-        <div class="blog-thumb">
-          <span class="blog-thumb-icon">✅</span>
+        <div class="blog-thumb blog-thumb--strategy">
+          <div class="blog-thumb-grid"></div>
           <div class="blog-thumb-glow"></div>
+          <span class="blog-thumb-title">Is Your Business Ready for AI?</span>
         </div>
         <div class="blog-body">
           <span class="blog-cat">AI Strategy</span>
@@ -1501,7 +1511,7 @@
       <div class="contact-option contact-option-primary">
         <div class="contact-option-icon">📅</div>
         <div class="contact-option-label">Book a Discovery Call</div>
-        <p class="contact-option-desc">Schedule a free 60-minute call directly in our calendar. Pick a time that works for you — no back-and-forth emails.</p>
+        <p class="contact-option-desc">Schedule a free 60-minute call directly in my calendar. Pick a time that works for you — no back-and-forth emails.</p>
         <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="btn-primary" style="margin-top: auto;">
           Book a Call
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -1511,7 +1521,7 @@
       <div class="contact-option">
         <div class="contact-option-icon">✉️</div>
         <div class="contact-option-label">Send an Email</div>
-        <p class="contact-option-desc">Prefer to reach out directly? Drop us a message and we'll get back to you within one business day.</p>
+        <p class="contact-option-desc">Prefer to reach out directly? Drop me a message and I'll get back to you within one business day.</p>
         <div style="display:flex; flex-direction:column; gap:12px; margin-top: auto;">
           <a href="#" onclick="window.location='mai'+'lto:contact@utilistech.co.uk'; return false;" class="btn-ghost" style="justify-content:center;">
             contact@utilistech.co.uk
